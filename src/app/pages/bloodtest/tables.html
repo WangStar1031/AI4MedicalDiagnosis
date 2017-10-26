@@ -1,0 +1,28 @@
+<div class="widgets">
+
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <div ba-panel ba-panel-title="Blood Test">
+        <div class="horizontal-scroll">
+          <table class="table table-hover">
+            <tr class="black-muted-bg">
+              <td></td>
+              <td><i>Esame</i></td>
+              <td><i>Risultato</i></td>
+              <td><i>U.M.</i></td>
+              <td><i>Valori di riferimento</i></td>
+            </tr>
+            <tr ng-repeat="item in metricsTableData" class="no-top-border"> 
+              <td></td>
+              <td style="padding: 8px; line-height: 16px;"><h4 style="margin: 0;">{{item.title}}</h4><i>{{item.subtitle}}</i></td>
+              <td style="padding: 8px; line-height: 16px;">{{item.risulato}}</td>              
+              <td style="padding: 8px; line-height: 16px;">{{item.um}}</td>
+              <td style="padding: 8px; line-height: 16px;" ng-bind-html="item.valori | trust"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
